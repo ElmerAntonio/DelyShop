@@ -1,0 +1,7 @@
+#fondo{
+  background-image: url(../imagen/pgini/INICIO1.jpg);
+  background-size: cover;
+  position: relative;
+  height: 627px;
+  background-repeat: no-repeat;
+}
