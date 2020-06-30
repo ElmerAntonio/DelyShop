@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Registro</title>
+    <title>Registro de Empresa</title>
     <link  rel="icon"   href="../imagen/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
@@ -51,41 +50,42 @@
             <h1 style="text-aling: center;">Registro</h1>
             <form action="" method="post" name="f1">
               <div class="form-group">
-                <label for="formGroupExampleInput">Nombre</label>
-                <input type="text" class="form-control"  placeholder="Primer Nombre" required name="nombre">
+                <label for="formGroupExampleInput">Nombre de la Empresa</label>
+                <input type="text" class="form-control"  placeholder="Nombre de Tu Empresa" required name="empresa">
               </div>
               <div class="form-group">
-                <label for="formGroupExampleInput">Apellido</label>
-                <input type="text" class="form-control"  placeholder="Primer Apellido" required name="apellido">
+                <label for="formGroupExampleInput">Ubicacion del Local</label>
+                <input type="text" class="form-control"  placeholder="Ubicacion" required name="ubicacion">
               </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Correo</label>
-                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Ingresa Tu Correo" required name="email">
+                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Ingresa el correo de la empresa Correo" required name="email">
               </div>
 
               <div class="form-group">
-                <label for="formGroupExampleInput">Direccion</label>
-                <input type="text" class="form-control"  placeholder="Barrio" required name="direccion">
+                <label for="formGroupExampleInput">Cuenta</label>
+                <input type="text" class="form-control"  placeholder="#Cuenta" required name="cuenta">
               </div>
               <div class="form-group">
-                <label for="formGroupExampleInput">Detalle</label>
-                <input type=" text" class="form-control"  placeholder="Detalle de la Direccion" style="height: 100px;" required name="ddireccion">
+                <label for="formGroupExampleInput">Telefono</label>
+                <input type="tel" class="form-control"  placeholder="Telefono"  required name="telefono">
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Contraseña</label>
                 <input type="password" class="form-control"  placeholder="Ingresa tu contraseña" required name="password">
                 <input type="password" class="form-control"  placeholder="Confirme su Contraseña" required name="password2">
              </div>
-             <input type="submit" name="submit" value="Entrar" class="btn btn-primary btn-lg mar" onclick="comprobarClave()">
+             <input type="submit" name="submit" value="Registro" class="btn btn-primary btn-lg mar" onclick="comprobarClave()">
              <a type="button" href="login.php" value="Entrar" class="btn btn-primary btn-lg mar" >Iniciar Sesión</a>
+
 
            </form>
            <?php
-
+           
            	include("function.php");
               if(isset($_POST['submit'])){
-                 $field =array("nombre"=>$_POST['nombre'],"apellido"=>$_POST['apellido'],"correo"=>$_POST['email'],"direccion"=>$_POST['direccion'],"pas"=>$_POST['password'],"dire_detalle"=>$_POST['ddireccion']);
-                 $tbl = "clientes";
+                 $field =array("nombre"=>$_POST['empresa'],"ubicacion"=>$_POST['ubicacion'],"cuenta"=>$_POST['cuenta'],"pas"=>$_POST['password'],"correo"=>$_POST['email'],"telefono"=>$_POST['telefono']);
+                 $tbl = "empresa";
                  insert($tbl,$field);
                  header('Location: login.php');
                }

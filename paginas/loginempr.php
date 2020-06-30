@@ -30,7 +30,7 @@
 
 
           <div class="col-lg-6" >
-            <h1 style="text-aling: center;">Inciar Sesión</h1>
+            <h1 style="text-aling: center;">Inciar Sesión para Empresa</h1>
             <form action="" method="post">
               <div class="form-group">
                 <label for="exampleInputEmail1">Correo</label>
@@ -42,10 +42,8 @@
                 <input type="password" class="form-control"  placeholder="Ingresa tu contraseña" requerid name="contras">
              </div>
 
-
-               <input type="submit" name="submit" value="Entrar" class="btn btn-primary btn-lg mar">
-               <a type="submit"   class="btn btn-primary btn-lg mar " href="registro.php">Registrate</a>
-
+             <input type="submit" name="submit" value="Entrar" class="btn btn-primary btn-lg mar">
+             <a type="submit"   class="btn btn-primary btn-lg mar " href="regempre.php">Registrate</a>
 
            </form>
            <? echo $mensaje; ?>
@@ -59,24 +57,25 @@
     global $id;
     if (isset($_POST['submit'])) {
       $usuario_log=$_POST['email'];// CONTENER EN UNA VARIABLE LO ESCRITO EN EL INPUT USUARIO_LOG
-      $contrasena_log=$_POST['contras'];//CONTENER EN UNA VARIABLE LO ESCRITO EN EL INPUT CONTRASEÑA_LOG
-      $sql = "select * from clientes where correo='$usuario_log' and pas='$contrasena_log'";
+    	$contrasena_log=$_POST['contras'];//CONTENER EN UNA VARIABLE LO ESCRITO EN EL INPUT CONTRASEÑA_LOG
+      $sql = "select * from empresa where correo='$usuario_log' and pas='$contrasena_log'";
       $result = db_query($sql);
       while($row = mysqli_fetch_object($result)){
-        $id = $row->codCli;
+        $id = $row->cod_empresa;
         if ($id>0) {
           date_default_timezone_set('America/Panama');
           $entrando=date('Y-M-D G:i:s');
           $estage="conectado";
           $field = array("estado"=>$estage,"time_login"=>$entrando);
-          $tbl = "clientes";
-          edit($tbl,$field,'codCli',$id);
+          $tbl = "empresa";
+          edit($tbl,$field,'cod_empresa',$id);
           session_start();
           $_SESSION['id_usuario']=$id;
           header("location:principal.php?id=$id");
+
+
         }
       }
-
     }else {
       $mensaje='<div class="alert alert-danger alert-dismissable col-md-offset-4 col-md-3 text-center">
   	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
