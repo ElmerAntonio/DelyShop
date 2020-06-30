@@ -40,7 +40,6 @@
   border-right: 1px solid #eeeeee;
 }
 
-
 .luc{
   background: rgba(41,184,229,1);
   border-radius: 0px 145px 137px 0px;
@@ -60,4 +59,10 @@
 footer{
   background-color: black;
   margin-top: 10px;
+}
+
+/*cuadros de login y el fondo*/
+
+#session{
+  width: 620px;
 }
