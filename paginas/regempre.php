@@ -81,13 +81,13 @@
 
            </form>
            <?php
-           
+
            	include("function.php");
               if(isset($_POST['submit'])){
                  $field =array("nombre"=>$_POST['empresa'],"ubicacion"=>$_POST['ubicacion'],"cuenta"=>$_POST['cuenta'],"pas"=>$_POST['password'],"correo"=>$_POST['email'],"telefono"=>$_POST['telefono']);
                  $tbl = "empresa";
                  insert($tbl,$field);
-                 header('Location: login.php');
+                 header('Location: loginempr.php');
                }
 
            ?>

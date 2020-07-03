@@ -68,10 +68,14 @@
           $estage="conectado";
           $field = array("estado"=>$estage,"time_login"=>$entrando);
           $tbl = "empresa";
+          $camp="cod_empresa";
+          $tbl = "empresa";
           edit($tbl,$field,'cod_empresa',$id);
           session_start();
+          $_SESSION['tabla']=$tbl;
+          $_SESSION['campo']=$camp;
           $_SESSION['id_usuario']=$id;
-          header("location:principal.php?id=$id");
+          header("location:inicio_empresa.php?id=$id");
 
 
         }

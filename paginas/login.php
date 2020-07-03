@@ -70,10 +70,13 @@
           $estage="conectado";
           $field = array("estado"=>$estage,"time_login"=>$entrando);
           $tbl = "clientes";
+          $camp="codCli";
           edit($tbl,$field,'codCli',$id);
           session_start();
+          $_SESSION['tabla']=$tbl;
+          $_SESSION['campo']=$camp;
           $_SESSION['id_usuario']=$id;
-          header("location:principal.php?id=$id");
+          header("location:selecempresa.php?id=$_SESSION[id_usuario]");
         }
       }
 

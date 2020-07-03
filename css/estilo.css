@@ -66,3 +66,9 @@ footer{
 #session{
   width: 620px;
 }
+/*mapa*/
+.map-container {
+        overflow: hidden;
+        position: relative;
+        height: 0;
+      }
