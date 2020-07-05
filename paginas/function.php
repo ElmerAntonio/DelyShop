@@ -18,6 +18,7 @@ function delete($tblname,$field_id,$id){
 
 	return db_query($sql);
 }
+
 function edit($tblname,$form_data,$field_id,$id){
 	$sql = "UPDATE ".$tblname." SET ";
 	$data = array();
@@ -31,6 +32,7 @@ function edit($tblname,$form_data,$field_id,$id){
 	$sql.=" where ".$field_id." = ".$id."";
 	return db_query($sql);
 }
+
 function select_id($tblname,$field_name,$field_id){
 	$sql = "Select * from ".$tblname." where ".$field_name." = ".$field_id."";
 	$db=db_query($sql);

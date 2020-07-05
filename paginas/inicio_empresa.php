@@ -24,7 +24,7 @@ include 'cabecera.php';
         <!-- Card -->
         <div class="card">
           <div class="view overlay">
-            <a href="config.php">
+            <a href="config_pro.php">
             <img class="card-img-top" src="../imagen/iconos/config.jpg" alt="Card image cap">
           </a>
           </div>
@@ -39,22 +39,20 @@ include 'cabecera.php';
 
           </div>
         </div>
-        <!-- Card -->
-
-      </div>
-      <!-- First column -->
-
-      <!-- Second column -->
 
 
       </div>
-      <!-- Second column -->
+
+
+
+      </div>
+
 
     </div>
-    <!-- First row -->
+
 
   </section>
-  <!-- Section: Block Content -->
+
 
 
 </div>

@@ -8,7 +8,7 @@ if ($_SESSION['tabla'] == "empresa") {
   }
 }
 ?>
-?>
+
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -40,14 +40,17 @@ if ($_SESSION['tabla'] == "empresa") {
            <!-- Links -->
            <ul class="navbar-nav mr-auto text-uppercase font-weight-normal">
              <li class="nav-item">
-              <a class="nav-link" href="<?php $tabn; ?>?id=<?php echo $_SESSION['id_usuario']; ?>&table=<?php echo $_SESSION['tabla'];?>&campo=<?php echo $_SESSION['campo']; ?>">Inicio</a>
+              <a class="nav-link" href="<?php echo $tabn; ?>?id=<?php echo $_SESSION['id_usuario']; ?>&table=<?php echo $_SESSION['tabla'];?>&campo=<?php echo $_SESSION['campo']; ?>">Inicio</a>
              </li>
+
+             <li class="nav-item">
+              <a class="nav-link" href="musuario.php?id=<?php echo $_SESSION['id_usuario']; ?>&table=<?php echo  $_SESSION['tabla'];?>&campo=<?php echo $_SESSION['campo']; ?>">Configuración</a>
+             </li>
+
              <li class="nav-item">
               <a class="nav-link" href="cerrar.php?id=<?php echo $_SESSION['id_usuario']; ?>&table=<?php echo $_SESSION['tabla'];?>&campo=<?php echo $_SESSION['campo']; ?>">Cerrar Sesion</a>
              </li>
-             <li class="nav-item">
-              <a class="nav-link" href="musuario.php?id=<?php echo $_SESSION['id_usuario']; ?>&table=<?php echo  $_SESSION['tabla'];?>&campo=<?php echo $_SESSION['campo']; ?>">Configuracion</a>
-             </li>
+
            </ul>
 
          </div>

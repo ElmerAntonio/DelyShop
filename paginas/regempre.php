@@ -37,7 +37,7 @@
         </div>
       </nav>
     </header>
-    <!--Cuerpo del login-->
+    <!--Cuerpo -->
     <section id="session">
       <div class="conteiner-fluid" style="margin-left: 14%;">
         <div class="row fullscreen align-items-center col-lg-10">
