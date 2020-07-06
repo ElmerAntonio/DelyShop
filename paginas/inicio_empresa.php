@@ -34,8 +34,8 @@ include 'cabecera.php';
           <div class="card-body">
 
             <h4 class="card-title">Ingreso de Producto</h4>
-            <hr><a href="config.php">
-            <p class="card-text text-muted font-weight-light">Ingresa los productos que vas a vender en la pagina web</p>
+            <hr>
+            <p class="card-text text-muted font-weight-light">Ingresa los productos que vas a vender en la pagina web, editalos o eliminalos</p>
 
           </div>
         </div>
