@@ -23,7 +23,7 @@ if ($_SESSION['tabla'] == "empresa") {
     <link rel="stylesheet" href="../css/bootstrap-grid.css">
     <link  rel="icon"   href="../imagen/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="../css/flexsearch.css"/>
+    
     <link rel="stylesheet" type="text/css" href="../css/cart.css">
     </head>
 

@@ -30,7 +30,7 @@
 
 
           <div class="col-lg-6" >
-            <h1 style="text-aling: center;">Inciar Sesión para Empresa</h1>
+            <h1 style="text-aling: center;">Iniciar Sesión para Empresa</h1>
             <form action="" method="post">
               <div class="form-group">
                 <label for="exampleInputEmail1">Correo</label>
